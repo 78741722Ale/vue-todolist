@@ -5,9 +5,35 @@
     box-sizing: border-box;
 }
 
+/*#region Dimensioni Row e Container */
+
 /* Altezza Prima Row */
 .h_sm {
     height: 100px;
+}
+/* Altezza Seconda Row */
+.h_xs {
+    height: 50px;
+}
+
+/* Container Small, canmbiato la dimensione per questo esercizio */
+.container-sm {
+    width: 470px !important;
+}
+
+/*#endregion */
+
+/*#region Utilities di testo e immagini  */
+
+/* Border Radius dell'input type e del button */
+.radius {
+    border-radius: 0.6rem;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+/* Testo Piccolo nei tasti input e button */
+.text_sm {
+    font-size: 0.8rem;
 }
 
 /* Logo image */
@@ -16,9 +42,10 @@
     height: 90%;
 }
 
+/*#endregion */
+
+
 /* Margin 0 se servisse */
 .m_auto {
     margin: 0 auto;
 }
-
-

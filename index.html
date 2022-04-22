@@ -25,6 +25,19 @@
             </div>
         </section>
         <!-- Seconda section - Input text e button -->
+        <section :class="s_container">
+            <!-- Input e Button condividono le stesse classi, parametrizzate -->
+            <div :class="s_row">
+                <!-- Input -->
+                <div class="col-9 d-flex">
+                    <input :class="input_class" type="text" placeholder="Nuovo Todo">
+                </div>
+                <!-- Button -->
+                <div class="col-3 d-flex">
+                    <button :class="input_class">Aggiungi</button>
+                </div>
+            </div>
+        </section>
         <!-- Terza Section - To Do List -->
     </div>
 
