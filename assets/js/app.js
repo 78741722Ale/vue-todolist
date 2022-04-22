@@ -55,6 +55,15 @@ const app = new Vue({
         removeTask(index) {
             // console.log("Sto ascoltando al click");
             this.tasks_todo.pop(index, 1) // ad ogni click rimuove una task
+        },
+        // Task Completata ma sbarrata
+        completedTask(index) {
+            console.log("Sto cliccando sulla task da sbarrare"); // Funziona
+            if (this.tasks_todo[index].done === false) {
+                this.tasks_todo[index].done === true;
+            } else if (this.tasks_todo[index].done === true) {
+                this.tasks_todo[index].done === false;
+            };
         }
     },
 })
