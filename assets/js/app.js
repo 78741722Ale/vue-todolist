@@ -51,6 +51,10 @@ const app = new Vue({
             this.tasks_todo.unshift(newTask) // pusho, in cima alla lista, il nuovo task aggiunto
             this.newTask = '' // faccio il clear del nuovo todo
         },
-        // Function al click della x per rimuovere il task
+        // Function al click della x per rimuovere il task al click
+        removeTask(index) {
+            // console.log("Sto ascoltando al click");
+            this.tasks_todo.pop(index, 1) // ad ogni click rimuove una task
+        }
     },
 })

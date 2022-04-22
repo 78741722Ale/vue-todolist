@@ -45,7 +45,7 @@
                 <!-- Task da generare in modo dinamico -->
                 <div v-for="(text, index) in tasks_todo" class="col-11 mb-3 d-flex justify-content-between b_bottom">
                     <li class="col-4 list-unstyled d-flex align-items-center justify-content-start" :class="tasks_todo[index].done === true ? 'done' : ''"> {{tasks_todo[index].text}}</li>  
-                    <li :class="cross_classes"><i class="fa-solid fa-xmark"></i></li>
+                    <li :class="cross_classes"><i class="fa-solid fa-xmark" @click="removeTask()"></i></li>
                 </div>
             </div>
         </section>
