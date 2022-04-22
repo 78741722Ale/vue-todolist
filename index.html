@@ -30,7 +30,7 @@
             <div :class="s_row">
                 <!-- Input -->
                 <div class="col-9 d-flex">
-                    <input :class="input_class" type="text" placeholder="Nuovo Todo" v-model="newTask">
+                    <input :class="input_class" type="text" placeholder="Nuovo Todo" v-model="newTask" @keyup.enter="addTask">
                 </div>
                 <!-- Button -->
                 <div class="col-3 d-flex">
