@@ -1,0 +1,24 @@
+/* Regola generale */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Altezza Prima Row */
+.h_sm {
+    height: 100px;
+}
+
+/* Logo image */
+.col-12 > img {
+    width: 30%;
+    height: 90%;
+}
+
+/* Margin 0 se servisse */
+.m_auto {
+    margin: 0 auto;
+}
+
+
