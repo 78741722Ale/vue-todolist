@@ -43,9 +43,9 @@
             <!-- Row Principale, su questa il padding e non altezze fisse. A questo devo mettere il v-for (?) -->
             <div :class="t_row">
                 <!-- Task da generare in modo dinamico -->
-                <div class="col-11 mb-3 b_bottom d-flex justify-content-between align-items-center">
-                    <div :class="task_class">Fare i Compiti</div>
-                    <button :class="cross_button"><i class="fa-solid fa-xmark"></i></button>
+                <div v-for="(text, index) in tasks_todo" class="col-11 mb-3 d-flex justify-content-between b_bottom">
+                    <li :class="task_classes"> {{tasks_todo[index].text}}</li>  
+                    <li :class="cross_classes"><i class="fa-solid fa-xmark"></i></li>
                 </div>
             </div>
         </section>
@@ -57,3 +57,10 @@
     <script src='./assets/js/app.js'></script>
 </body>
 </html>
+
+
+<!-- Provato anche cosi ma mi ero annidato troppo :/ -->
+    <!-- <div class="col-11 mb-3 b_bottom d-flex justify-content-between align-items-center"> -->
+        <!-- <div :class="task_class">Fare i Compiti</div>
+        <button :class="cross_button"><i class="fa-solid fa-xmark"></i></button> -->
+    <!-- </div> -->

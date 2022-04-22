@@ -15,7 +15,27 @@ const app = new Vue({
         // Classi Utilities 
         input_class: 'w-100 p-2 text_sm radius', // Classi in comune tra button e Type Text
         logo_col: 'col-12 d-flex justify-content-center align-items-center', // prima col (logo)
-        cross_button: 'col-1 d-flex justify-content-end align-items-center border-0',
-        task_class: 'col-4 d-flex justify-content-start align-items-center',
+        task_classes: 'col-4 list-unstyled d-flex align-items-center justify-content-start',
+        cross_classes: 'col-1 list-unstyled d-flex align-items-center justify-content-center', // Classi per centraggio croce
+
+        // Dati primari 
+        // Stampare all'interno di una lista, un item per ogni todo. 
+        // Se la proprietà done è uguale a true, visualizzare il testo del todo.
+        tasks_todo: [
+            {
+                text: "Fare i compiti",
+                done: true,
+            },
+            {
+                text: "Fare la spesa",
+                done: true,
+            },
+            {
+                text: "Fare il bucato",
+                done: true,
+            }
+        ],
+        // Task Vuoto
+        newTask: '',
     },
 })
