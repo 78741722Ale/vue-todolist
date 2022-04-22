@@ -50,7 +50,7 @@
             </div>
         </section>
         <!-- Section se tutto è stato fatto -->
-        <section class="p-3 d-flex justify-content-center align-items-center" :class="t_container" v-else>
+        <section :class="hidden_section" :class="t_container" v-else>
             <p class="mb-0">Non ci sono cose da fare : )</p>
         </section>
     </div>
@@ -61,10 +61,3 @@
     <script src='./assets/js/app.js'></script>
 </body>
 </html>
-
-
-<!-- Provato anche cosi ma mi ero annidato troppo :/ -->
-    <!-- <div class="col-11 mb-3 b_bottom d-flex justify-content-between align-items-center"> -->
-        <!-- <div :class="task_class">Fare i Compiti</div>
-        <button :class="cross_button"><i class="fa-solid fa-xmark"></i></button> -->
-    <!-- </div> -->

@@ -8,6 +8,7 @@ const app = new Vue({
         f_container: 'container-md mt-3', // Primo container (logo)
         s_container: 'container-sm mt-3',
         t_container: 'container-sm mt-3 bg_t_cont ',
+        hidden_section: 'p-3 d-flex justify-content-center align-items-center',
         // Rows
         f_row: 'row h_sm', // Prima row (logo)
         s_row: 'row h_xs d-flex gx-3 justify-content-center align-items-center', // Seconda row (Input e Button)
@@ -23,15 +24,15 @@ const app = new Vue({
         tasks_todo: [
             {
                 text: "Fare i compiti",
-                done: true,
+                done: false,
             },
             {
                 text: "Fare la spesa",
-                done: true,
+                done: false,
             },
             {
                 text: "Fare il bucato",
-                done: true,
+                done: false,
             },
         ],
         // Task Vuoto

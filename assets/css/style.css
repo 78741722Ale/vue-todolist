@@ -51,14 +51,11 @@
     height: 90%;
 }
 
-/*#endregion */
-
-/* Margin 0 se servisse */
-.m_auto {
-    margin: 0 auto;
-}
-
 /* Task da lasciare se è stato cliccato */
 .done {
     text-decoration: line-through;
 }
+/*#endregion */
+
+
+
