@@ -30,11 +30,11 @@
             <div :class="s_row">
                 <!-- Input -->
                 <div class="col-9 d-flex">
-                    <input :class="input_class" type="text" placeholder="Nuovo Todo">
+                    <input :class="input_class" type="text" placeholder="Nuovo Todo" v-model="newTask">
                 </div>
                 <!-- Button -->
                 <div class="col-3 d-flex">
-                    <button :class="input_class">Aggiungi</button>
+                    <button @click="addTask" :class="input_class">Aggiungi</button>
                 </div>
             </div>
         </section>

@@ -17,7 +17,6 @@ const app = new Vue({
         logo_col: 'col-12 d-flex justify-content-center align-items-center', // prima col (logo)
         task_classes: 'col-4 list-unstyled d-flex align-items-center justify-content-start',
         cross_classes: 'col-1 list-unstyled d-flex align-items-center justify-content-center', // Classi per centraggio croce
-
         // Dati primari 
         // Stampare all'interno di una lista, un item per ogni todo. 
         // Se la proprietà done è uguale a true, visualizzare il testo del todo.
@@ -33,9 +32,18 @@ const app = new Vue({
             {
                 text: "Fare il bucato",
                 done: true,
-            }
+            },
         ],
         // Task Vuoto
         newTask: '',
+    },
+
+    methods: {
+        addTask() {
+            console.log("Sto ascoltando il bottone Aggiungi"); // verifico se funziona al click
+            console.log(this.newTask); // ascolto e verifico cosa scrive l'utente nell'input
+            this.tasks_todo.unshift(this.newTask) // pusho, in cima alla lista, il nuovo task aggiunto
+            this.newTask = '' // faccio il clear del nuovo todo
+        }
     },
 })
