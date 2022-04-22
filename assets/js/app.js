@@ -41,8 +41,13 @@ const app = new Vue({
     methods: {
         addTask() {
             console.log("Sto ascoltando il bottone Aggiungi"); // verifico se funziona al click
-            console.log(this.newTask); // ascolto e verifico cosa scrive l'utente nell'input
-            this.tasks_todo.unshift(this.newTask) // pusho, in cima alla lista, il nuovo task aggiunto
+            // Creo un nuovo oggetto?
+            let newTask = {
+                text: this.newTask,
+                done: false
+            }
+            console.log(newTask); // ascolto e verifico cosa scrive l'utente nell'input
+            this.tasks_todo.unshift(newTask) // pusho, in cima alla lista, il nuovo task aggiunto
             this.newTask = '' // faccio il clear del nuovo todo
         }
     },
