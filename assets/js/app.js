@@ -7,8 +7,8 @@ const app = new Vue({
         // Containers
         f_container: 'container-md mt-3', // Primo container (logo)
         s_container: 'container-sm mt-3',
-        t_container: 'container-sm mt-3 bg_t_cont ',
-        hidden_section: 'p-3 d-flex justify-content-center align-items-center',
+        t_container: 'container-sm mt-3 bg_t_cont',
+        hidden_section: 'container-sm mt-3 p-3 d-flex justify-content-center bg_t_cont align-items-center',
         // Rows
         f_row: 'row h_sm', // Prima row (logo)
         s_row: 'row h_xs d-flex gx-3 justify-content-center align-items-center', // Seconda row (Input e Button)
@@ -48,8 +48,19 @@ const app = new Vue({
                 text: this.newTask,
                 done: false
             }
+            // Analisi condizione
+            /*
+                SE this.newTask != '' ==> Quindi se è diversa da stringa vuota
+                ELSE ==> Esce un alert
+            */
+            if (this.newTask != '') {
+                console.log(`Questo testo è lungo ${this.newTask.length}`);
+                this.tasks_todo.unshift(newTask)
+            } else {
+                alert("Non puoi non scrivere niente")
+            }
+
             console.log(newTask); // ascolto e verifico cosa scrive l'utente nell'input
-            this.tasks_todo.unshift(newTask) // pusho, in cima alla lista, il nuovo task aggiunto
             this.newTask = '' // faccio il clear del nuovo todo
         },
         // Function al click della x per rimuovere il task al click
