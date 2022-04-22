@@ -39,7 +39,7 @@
             </div>
         </section>
         <!-- Terza Section - To Do List -->
-        <section :class="t_container">
+        <section :class="t_container" v-if="tasks_todo.length > 0">
             <!-- Row Principale, su questa il padding e non altezze fisse. A questo devo mettere il v-for (?) -->
             <div :class="t_row">
                 <!-- Task da generare in modo dinamico -->
@@ -48,6 +48,10 @@
                     <li :class="cross_classes"><i class="fa-solid fa-xmark" @click="removeTask()"></i></li>
                 </div>
             </div>
+        </section>
+        <!-- Section se tutto è stato fatto -->
+        <section class="p-3 d-flex justify-content-center align-items-center" :class="t_container" v-else>
+            <p class="mb-0">Non ci sono cose da fare : )</p>
         </section>
     </div>
 

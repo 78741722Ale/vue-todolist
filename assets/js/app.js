@@ -7,11 +7,11 @@ const app = new Vue({
         // Containers
         f_container: 'container-md mt-3', // Primo container (logo)
         s_container: 'container-sm mt-3',
-        t_container: 'container-sm mt-3',
+        t_container: 'container-sm mt-3 bg_t_cont ',
         // Rows
         f_row: 'row h_sm', // Prima row (logo)
         s_row: 'row h_xs d-flex gx-3 justify-content-center align-items-center', // Seconda row (Input e Button)
-        t_row: 'row p-3 justify-content-center align-items-center bg_t_cont flex-wrap',
+        t_row: 'row p-3 justify-content-center align-items-center flex-wrap',
         // Classi Utilities 
         input_class: 'w-100 p-2 text_sm radius', // Classi in comune tra button e Type Text
         logo_col: 'col-12 d-flex justify-content-center align-items-center', // prima col (logo)
