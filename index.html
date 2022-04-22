@@ -44,7 +44,7 @@
             <div :class="t_row">
                 <!-- Task da generare in modo dinamico -->
                 <div v-for="(text, index) in tasks_todo" class="col-11 mb-3 d-flex justify-content-between b_bottom">
-                    <li @click="completedTask()" class="col-4 list-unstyled d-flex align-items-center justify-content-start" :class="tasks_todo[index].done === true ? 'done' : ''"> {{tasks_todo[index].text}}</li>  
+                    <li @click="completedTask(index)" class="col-4 list-unstyled d-flex align-items-center justify-content-start" :class="text.done == true ? 'done' : '' "> {{tasks_todo[index].text}}</li>  
                     <li :class="cross_classes"><i class="fa-solid fa-xmark" @click="removeTask()"></i></li>
                 </div>
             </div>

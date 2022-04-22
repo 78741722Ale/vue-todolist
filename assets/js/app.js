@@ -57,12 +57,12 @@ const app = new Vue({
             this.tasks_todo.pop(index, 1) // ad ogni click rimuove una task
         },
         // Task Completata ma sbarrata
-        completedTask(index) {
+        completedTask(i) {
             console.log("Sto cliccando sulla task da sbarrare"); // Funziona
-            if (this.tasks_todo[index].done === false) {
-                this.tasks_todo[index].done === true;
-            } else if (this.tasks_todo[index].done === true) {
-                this.tasks_todo[index].done === false;
+            if (this.tasks_todo[i].done === false) {
+                this.tasks_todo[i].done = true;
+            } else if (this.tasks_todo[i].done === true) {
+                this.tasks_todo[i].done = false;
             };
         }
     },
