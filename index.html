@@ -39,6 +39,16 @@
             </div>
         </section>
         <!-- Terza Section - To Do List -->
+        <section :class="t_container">
+            <!-- Row Principale, su questa il padding e non altezze fisse. A questo devo mettere il v-for (?) -->
+            <div :class="t_row">
+                <!-- Task da generare in modo dinamico -->
+                <div class="col-11 mb-3 b_bottom d-flex justify-content-between align-items-center">
+                    <div :class="task_class">Fare i Compiti</div>
+                    <button :class="cross_button"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+        </section>
     </div>
 
     <!-- Script di Vue JS -->

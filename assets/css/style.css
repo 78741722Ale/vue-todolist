@@ -15,12 +15,16 @@
 .h_xs {
     height: 50px;
 }
-
 /* Container Small, canmbiato la dimensione per questo esercizio */
 .container-sm {
     width: 470px !important;
 }
 
+/* Background della row */
+.bg_t_cont {
+    background-color: rgba(200, 200, 200, 0.3);
+    border-radius: 0.5rem;
+}
 /*#endregion */
 
 /*#region Utilities di testo e immagini  */
@@ -29,6 +33,11 @@
 .radius {
     border-radius: 0.6rem;
     border: 1px solid rgb(0, 0, 0);
+}
+
+/* Bordo inferiore nei list item generati dinamicamente */
+.b_bottom {
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
 }
 
 /* Testo Piccolo nei tasti input e button */
@@ -43,7 +52,6 @@
 }
 
 /*#endregion */
-
 
 /* Margin 0 se servisse */
 .m_auto {
