@@ -56,10 +56,10 @@ const app = new Vue({
             if (this.newTask != '') {
                 console.log(`Questo testo è lungo ${this.newTask.length}`);
                 this.tasks_todo.unshift(newTask)
-            } else {
+            }
+            else {
                 alert("Non puoi non scrivere niente")
             }
-
             console.log(newTask); // ascolto e verifico cosa scrive l'utente nell'input
             this.newTask = '' // faccio il clear del nuovo todo
         },
