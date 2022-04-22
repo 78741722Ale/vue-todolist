@@ -15,7 +15,7 @@ const app = new Vue({
         // Classi Utilities 
         input_class: 'w-100 p-2 text_sm radius', // Classi in comune tra button e Type Text
         logo_col: 'col-12 d-flex justify-content-center align-items-center', // prima col (logo)
-        task_classes: 'col-4 list-unstyled d-flex align-items-center justify-content-start',
+        // task_classes: 'col-4 list-unstyled d-flex align-items-center justify-content-start',
         cross_classes: 'col-1 list-unstyled d-flex align-items-center justify-content-center', // Classi per centraggio croce
         // Dati primari 
         // Stampare all'interno di una lista, un item per ogni todo. 
@@ -39,6 +39,7 @@ const app = new Vue({
     },
 
     methods: {
+        // Function al click per un nuovo task
         addTask() {
             console.log("Sto ascoltando il bottone Aggiungi"); // verifico se funziona al click
             // Creo un nuovo oggetto?
@@ -49,6 +50,7 @@ const app = new Vue({
             console.log(newTask); // ascolto e verifico cosa scrive l'utente nell'input
             this.tasks_todo.unshift(newTask) // pusho, in cima alla lista, il nuovo task aggiunto
             this.newTask = '' // faccio il clear del nuovo todo
-        }
+        },
+        // Function al click della x per rimuovere il task
     },
 })
