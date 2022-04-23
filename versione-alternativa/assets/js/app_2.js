@@ -14,7 +14,24 @@ const app = new Vue({
         logo_class: "w-100 h-100", // classi del logo
         // Tutte le classi dell'input
         col_input: "col-12 d-flex justify-content-center align-items-start",
+        // classi Todo List 
+        todo_classes: "col-5 h-75 task_style d-flex justify-content-center align-items-start",
+        completed_classes: "col-2 h-75 task_style d-flex justify-content-center align-items-start",
+        trash_classes: "col-4 h-75 task_style d-flex justify-content-center align-items-start",
+        // Dati delle task to do
+        tasks: [
+            {
+                title: "Todo List",
+                text: "Do Something else"
+            },
+            {
+                title: "Completed",
+                text: "Do Else"
+            },
+            {
+                title: "Trashed",
+                text: "Do Something"
+            },
+        ],
     },
-
-
 })

@@ -41,13 +41,17 @@
                 <!-- Tasks, completed e trash -->
                 <div :class="main_tasks">
                     <!-- To do List -->
-                    <div class="col-5 h-75 task_style">
-
+                    <div :class="todo_classes">
+                        <h5 class="col-11 my-3">{{tasks[0].title}}</h5>
                     </div>
                     <!-- Completed List -->
-                    <div class="col-2 h-75 task_style"></div>
+                    <div :class="completed_classes">
+                        <h5 class="col-11 my-3">{{tasks[1].title}}</h5>
+                    </div>
                     <!-- Trash list -->
-                    <div class="col-4 h-75 task_style"></div>
+                    <div :class="trash_classes">
+                        <h5 class="col-11 my-3">{{tasks[2].title}}</h5>
+                    </div>
                 </div>
             </div>
         </div>
