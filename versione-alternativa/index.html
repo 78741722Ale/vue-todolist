@@ -42,15 +42,25 @@
                 <div :class="main_tasks">
                     <!-- To do List -->
                     <div :class="todo_classes">
+                        <!-- Titolo container -->
                         <h5 class="col-11 my-3">{{tasks[0].title}}</h5>
+                        <!-- Container della task. Qui andrebbe applicato un v-for per ogni task -->
+                        <div class="col-11 d-flex p-3 flex-nowrap task_todo">
+                            <div class="col-8 d-flex px-3">{{tasks[0].text}}</div>
+                            <div class="col-2 d-flex justify-content-end align-items-center"><i class="fa-solid fa-circle-check"></i></div>
+                            <div class="col-2 d-flex justify-content-center align-items-center"><i class="fa-solid fa-trash"></i></div>
+                        </div>
                     </div>
                     <!-- Completed List -->
                     <div :class="completed_classes">
-                        <h5 class="col-11 my-3">{{tasks[1].title}}</h5>
+                        <!-- Titolo container -->
+                        <h5 class="col-11 text-center my-3">{{tasks[1].title}}</h5>
+                        
                     </div>
                     <!-- Trash list -->
                     <div :class="trash_classes">
-                        <h5 class="col-11 my-3">{{tasks[2].title}}</h5>
+                        <!-- Titolo container -->
+                        <h5 class="col-11 text-center my-3">{{tasks[2].title}}</h5>
                     </div>
                 </div>
             </div>

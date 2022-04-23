@@ -15,9 +15,9 @@ const app = new Vue({
         // Tutte le classi dell'input
         col_input: "col-12 d-flex justify-content-center align-items-start",
         // classi Todo List 
-        todo_classes: "col-5 h-75 task_style d-flex justify-content-center align-items-start",
-        completed_classes: "col-2 h-75 task_style d-flex justify-content-center align-items-start",
-        trash_classes: "col-4 h-75 task_style d-flex justify-content-center align-items-start",
+        todo_classes: "col-5 h-75 task_style d-flex justify-content-start flex-column align-items-center flex-wrap",
+        completed_classes: "col-2 h-75 task_style d-flex justify-content-start flex-column align-items-center flex-wrap",
+        trash_classes: "col-4 h-75 task_style d-flex justify-content-start flex-column align-items-center flex-wrap",
         // Dati delle task to do
         tasks: [
             {
