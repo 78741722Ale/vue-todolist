@@ -36,6 +36,10 @@ const app = new Vue({
                 done: true
             },
         ],
+        // Task per i completi dove pusho
+        tasks_complete: [],
+        // Task per i completi trash pove pusho
+        tasks_trash: [],
         // Aggiunto un task vuoto
         newTask: '',
     },
@@ -46,6 +50,7 @@ const app = new Vue({
             console.log("Sto Ascoltando l'input ");
         },
         // Method per il button add task dell'input
+        // FATTO NON GUARDARE PIU
         addTask() {
             console.log("Sto Ascoltando il bottone 'add' ");
             // Creo un nuovo oggetto?
@@ -53,6 +58,7 @@ const app = new Vue({
                 text: this.newTask,
                 done: false
             }
+            // Avvio una condizione, se non c'è niente non può pushare
             if (this.newTask != '') {
                 console.log(`Questo testo è lungo ${this.newTask.length}`);
                 this.tasks.push(newTask)
@@ -66,6 +72,8 @@ const app = new Vue({
         // Method per task completata
         doneTask() {
             console.log("Sto Ascoltando il click del check completato");
+            // Creo di nuovo oggetto?
+            this.tasks_complete.push(this.tasks_complete.text)
         },
         // Method per spostare nel cestino dalla todoList
         moveToBinTask() {

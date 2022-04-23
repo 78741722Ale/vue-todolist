@@ -47,7 +47,7 @@
                         <!-- Container della task. Qui andrebbe applicato un v-for per ogni task -->
                         <div v-for="(text, index) in tasks" class="col-11 d-flex mb-2 p-2 task_todo">
                             <div class="col-10 d-flex px-1">{{tasks[index].text}}</div>
-                            <div class="col-1 d-flex justify-content-start align-items-center"><i @click="doneTask" class="fa-solid fa-circle-check"></i></div>
+                            <div class="col-1 d-flex justify-content-start align-items-center"><i @click="doneTask(index)" class="fa-solid fa-circle-check"></i></div>
                             <div class="col-1 d-flex justify-content-end align-items-center"><i @click="moveToBinTask" class="fa-solid fa-trash"></i></div>
                         </div>
                     </div>
@@ -56,8 +56,8 @@
                         <!-- Titolo container -->
                         <h5 class="col-11 text-center my-3">{{tasks[1].title}}</h5>
                         <!-- Container della task. Qui andrebbe applicato un v-for per ogni task -->
-                        <div class="col-11 mb-2 d-flex p-2 flex-nowrap task_todo">
-                            <div class="col-10 d-flex px-1">{{tasks[1].text}}</div>
+                        <div v-for="(text, index) in tasks_complete" class="col-11 mb-2 d-flex p-2 flex-nowrap task_todo">
+                            <div class="col-10 d-flex px-1">{{tasks[index].text}}</div>
                             <div class="col-2 d-flex justify-content-end align-items-center"><i @click="notYetTask" class="fa-solid fa-rotate-left"></i></div>
                         </div>
                     </div>
