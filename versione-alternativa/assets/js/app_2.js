@@ -36,7 +36,11 @@ const app = new Vue({
                 done: true
             },
         ],
-    }, methods: {
+        // Aggiunto un task vuoto
+        newTask: '',
+    },
+
+    methods: {
         // Method per il ascolto dell'input
         inputTask() {
             console.log("Sto Ascoltando l'input ");
@@ -44,6 +48,20 @@ const app = new Vue({
         // Method per il button add task dell'input
         addTask() {
             console.log("Sto Ascoltando il bottone 'add' ");
+            // Creo un nuovo oggetto?
+            let newTask = {
+                text: this.newTask,
+                done: false
+            }
+            if (this.newTask != '') {
+                console.log(`Questo testo è lungo ${this.newTask.length}`);
+                this.tasks.push(newTask)
+            }
+            else {
+                alert("Non puoi non scrivere niente")
+            }
+            console.log(newTask);
+            this.newTask = ''
         },
         // Method per task completata
         doneTask() {
@@ -53,11 +71,12 @@ const app = new Vue({
         moveToBinTask() {
             console.log("Sto Ascoltando la task che se ne va nel cestino");
         },
-        // Method per task nel completed
+        // Method per task nel completed, serve a far rientrare la task in todo
+        // Equivale a returnTask()
         notYetTask() {
             console.log("Sto Ascoltando il rientro della task nei completati");
         },
-        // Method per task nel cestino
+        // Method per task nel cestino, serve a far rientrare la task in todo
         returnTask() {
             console.log("Sto Ascoltando il rientro in To do list");
         }
