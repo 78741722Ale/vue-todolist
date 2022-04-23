@@ -1,0 +1,45 @@
+/* Regola generale */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Elemento Radice */
+:root {
+    --body_bg: rgba(176, 196, 222, 1);
+    --text_color: rgba(0, 0, 0, 1);
+    --cont_color:rgba(255, 255, 255, 1);
+    --task_bgcolor: rgba(211, 211, 211, 1);
+    --width_container: 900px !important;
+    --heigth_container: 500px !important;
+    --row_heigth: 100% !important;
+    --row_width:100% !important;
+}
+
+/* Regole al Body
+messe per centrare tutto il contenuto */
+body {
+    background-color: var(--body_bg);
+    color: var(--text_color);
+}
+
+/* messe regole all'id per centrare tutto il contenuto */
+#app {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Regole sovrascritte al main container */
+.container {
+    width: var(--width_container);
+    height: var(--heigth_container);
+    margin: 0 auto;
+    background-color: aquamarine;
+}
+
+
+
+
