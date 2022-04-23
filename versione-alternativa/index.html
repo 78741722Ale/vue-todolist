@@ -9,6 +9,8 @@
     <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous'>
     <!-- Link a foglio di style -->
     <link rel='stylesheet' href='./assets/css/style_2.css'>
+    <!-- Link a Font Awesome -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css' integrity='sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==' crossorigin='anonymous' referrerpolicy='no-referrer' />
 </head>
 <body>
     
@@ -25,11 +27,27 @@
                         <img :class="logo_class" :src="logo" alt="logo Boolean">
                     </div>
                     <!-- Input Type Text -->
-                    <div class="col-12"></div>
+                    <div :class="col_input">
+                        <!-- Input -->
+                        <div class="col-10 p-1">
+                            <input class="w-100 border_input pt-1 ps-2 pb-1" type="text" placeholder="Add a task Here">
+                        </div>
+                        <!-- Button -->
+                        <div class="col-2 p-1">
+                            <button class="w-100 border_button pt-1 pb-1">Add</button>
+                        </div>
+                    </div>
                 </div>
                 <!-- Tasks, completed e trash -->
                 <div :class="main_tasks">
+                    <!-- To do List -->
+                    <div class="col-5 h-75 task_style">
 
+                    </div>
+                    <!-- Completed List -->
+                    <div class="col-2 h-75 task_style"></div>
+                    <!-- Trash list -->
+                    <div class="col-4 h-75 task_style"></div>
                 </div>
             </div>
         </div>

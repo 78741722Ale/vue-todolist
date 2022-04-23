@@ -1,3 +1,5 @@
+/*#region Utilities per body e contenitori  */
+
 /* Regola generale */
 * {
     margin: 0;
@@ -43,12 +45,35 @@ body {
 .row {
     width: var(--row_width);
     height: var(--row_heigth);
-    background-color: brown;
 }
 
-.bg_prova {
-    background-color: blanchedalmond;
+/*#endregion */
+
+/*#region Utilities per Contenuti  */
+
+/* Bordi input type text di add task */
+.border_input {
+    border: 0.5px solid rgba(211, 211, 211, 0.898);
+    border-radius: 5px;
 }
+/* Bordi del bottone add */
+.border_button {
+    border: 0.5px solid rgba(211, 211, 211, 0.898);
+    border-radius: 5px;
+}
+
+/* Classe comune per tutti i container task */
+.task_style {
+    background-color: var(--cont_color);
+    border-radius: 10px;
+    box-shadow: 5px 15px 10px rgba(0, 0, 0, 0.3);
+}
+
+/*#endregion */
+
+
+
+
 
 
 
