@@ -14,8 +14,24 @@
     
     <!-- Link a div con ID Principale -->
     <div id='app'>
-        <div class="container">
+        <!-- Main container -->
+        <div :class="container_class">
+            <!-- Main row Principale -->
+            <div :class="row_class">
+                <!-- Logo e Input -->
+                <div :class="logo_input">
+                    <!-- Logo -->
+                    <div :class="col_logo">
+                        <img :class="logo_class" :src="logo" alt="logo Boolean">
+                    </div>
+                    <!-- Input Type Text -->
+                    <div class="col-12"></div>
+                </div>
+                <!-- Tasks, completed e trash -->
+                <div :class="main_tasks">
 
+                </div>
+            </div>
         </div>
     </div>
 

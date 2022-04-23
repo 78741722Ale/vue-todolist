@@ -37,7 +37,17 @@ body {
     width: var(--width_container);
     height: var(--heigth_container);
     margin: 0 auto;
-    background-color: aquamarine;
+}
+
+/* Regole sovrascritte alla row principale  */
+.row {
+    width: var(--row_width);
+    height: var(--row_heigth);
+    background-color: brown;
+}
+
+.bg_prova {
+    background-color: blanchedalmond;
 }
 
 
