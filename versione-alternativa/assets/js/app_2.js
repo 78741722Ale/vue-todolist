@@ -22,16 +22,44 @@ const app = new Vue({
         tasks: [
             {
                 title: "Todo List",
-                text: "Do Something else"
+                text: "Do Something else",
+                done: true
             },
             {
                 title: "Completed",
-                text: "Do Else"
+                text: "Do Else",
+                done: true
             },
             {
                 title: "Trashed",
-                text: "Do Something"
+                text: "Do Something",
+                done: true
             },
         ],
+    }, methods: {
+        // Method per il ascolto dell'input
+        inputTask() {
+            console.log("Sto Ascoltando l'input ");
+        },
+        // Method per il button add task dell'input
+        addTask() {
+            console.log("Sto Ascoltando il bottone 'add' ");
+        },
+        // Method per task completata
+        doneTask() {
+            console.log("Sto Ascoltando il click del check completato");
+        },
+        // Method per spostare nel cestino dalla todoList
+        moveToBinTask() {
+            console.log("Sto Ascoltando la task che se ne va nel cestino");
+        },
+        // Method per task nel completed
+        notYetTask() {
+            console.log("Sto Ascoltando il rientro della task nei completati");
+        },
+        // Method per task nel cestino
+        returnTask() {
+            console.log("Sto Ascoltando il rientro in To do list");
+        }
     },
 })

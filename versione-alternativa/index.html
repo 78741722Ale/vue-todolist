@@ -30,11 +30,11 @@
                     <div :class="col_input">
                         <!-- Input -->
                         <div class="col-10 p-1">
-                            <input class="w-100 border_input pt-1 ps-2 pb-1" type="text" placeholder="Add a task Here">
+                            <input @click="inputTask()" class="w-100 border_input pt-1 ps-2 pb-1" type="text" placeholder="Add a task Here">
                         </div>
                         <!-- Button -->
                         <div class="col-2 p-1">
-                            <button class="w-100 border_button pt-1 pb-1">Add</button>
+                            <button @click="addTask()" class="w-100 border_button pt-1 pb-1">Add</button>
                         </div>
                     </div>
                 </div>
@@ -47,8 +47,8 @@
                         <!-- Container della task. Qui andrebbe applicato un v-for per ogni task -->
                         <div class="col-11 d-flex mb-2 p-3 flex-nowrap task_todo">
                             <div class="col-10 d-flex px-1">{{tasks[0].text}}</div>
-                            <div class="col-1 d-flex justify-content-start align-items-center"><i class="fa-solid fa-circle-check"></i></div>
-                            <div class="col-1 d-flex justify-content-end align-items-center"><i class="fa-solid fa-trash"></i></div>
+                            <div class="col-1 d-flex justify-content-start align-items-center"><i @click="doneTask()" class="fa-solid fa-circle-check"></i></div>
+                            <div class="col-1 d-flex justify-content-end align-items-center"><i @click="moveToBinTask()" class="fa-solid fa-trash"></i></div>
                         </div>
                     </div>
                     <!-- Completed List -->
@@ -58,7 +58,7 @@
                         <!-- Container della task. Qui andrebbe applicato un v-for per ogni task -->
                         <div class="col-11 mb-2 d-flex p-3 flex-nowrap task_todo">
                             <div class="col-10 d-flex px-1">{{tasks[1].text}}</div>
-                            <div class="col-2 d-flex justify-content-end align-items-center"><i class="fa-solid fa-rotate-left"></i></div>
+                            <div class="col-2 d-flex justify-content-end align-items-center"><i @click="notYetTask()" class="fa-solid fa-rotate-left"></i></div>
                         </div>
                     </div>
                     <!-- Trash list -->
@@ -68,7 +68,7 @@
                         <!-- Container della task. Qui andrebbe applicato un v-for per ogni task -->
                         <div class="col-11 mb-2 d-flex p-3 flex-nowrap task_todo">
                             <div class="col-10 d-flex px-1">{{tasks[2].text}}</div>
-                            <div class="col-2 d-flex justify-content-end align-items-center"><i class="fa-solid fa-trash-arrow-up"></i></div>
+                            <div class="col-2 d-flex justify-content-end align-items-center"><i @click="returnTask()" class="fa-solid fa-trash-arrow-up"></i></div>
                         </div>
                     </div>
                 </div>
